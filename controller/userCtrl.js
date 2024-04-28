@@ -556,10 +556,10 @@ const userCart = asyncHandler(async (req, res) => {
     let products = [];
     const user = await User.findById(_id);
     // check if user already have product in cart
-    const alreadyExistCart = await Cart.findOne({ orderby: user._id });
-    if (alreadyExistCart) {
-      alreadyExistCart.remove();
-    }
+    // const alreadyExistCart = await Cart.findOne({ orderby: user._id });
+    // if (alreadyExistCart) {
+    //   alreadyExistCart.remove();
+    // }
     for (let i = 0; i < cart.length; i++) {
       let object = {};
       object.product = cart[i]._id;
