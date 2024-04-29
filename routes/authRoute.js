@@ -44,7 +44,7 @@ router.post("/getorderbyuser/:id", authMiddleware, isAdmin, getAllOrders);
 router.get("/refresh", handleRefreshToken);
 router.get("/wishlist", authMiddleware, getWishlist);
 router.get("/cart", authMiddleware, getUserCart);
-router.get("/:id", authMiddleware, isAdmin, getSingleUser);
+router.get("/:id", authMiddleware, getSingleUser);
 router.delete("/empty-cart", authMiddleware, emptyCart);
 router.delete("/:id", deleteUser);
 router.put(
